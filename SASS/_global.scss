@@ -1,0 +1,220 @@
+@use "component";
+
+
+@mixin section-display {
+    width: 100%;
+    padding: 3rem;
+    align-items: center;
+    max-width: 992px;
+    margin: auto;  
+}
+
+
+.nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 4 rem;
+    border-bottom: solid 1px #ddd;
+}
+
+
+.logo img {
+    width: 200px;
+    padding: auto;
+}
+
+.sec-home{
+    display: flex;
+    @include section-display();
+  
+
+    .home-cta {
+        flex: 1;
+        
+    }
+    .cta-text {
+        color: component.$color_main;
+        }
+
+    .home-title{
+        width: 20rem;
+    }
+    img {
+        max-width: 100%;
+    }
+   
+}
+
+
+.sec-features {
+    @include section-display();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .intro {
+        text-align: center;
+                h3 {
+                font-size: 1.8rem;
+    }
+                p {
+                font-size: 0.8rem;
+                color: rgb(68, 58, 58);
+    }
+    }
+    .features {
+        display: flex;
+        align-items: center;
+        margin: auto;
+             
+        .image {
+                    img {
+                max-width: 100%;
+                display: flex;
+            }
+        }
+
+
+        .text {
+            
+
+                .feature {
+                    gap: 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: baseline;
+                
+                    .descrption {
+                        margin-left: 1.15rem;
+                            .description-title {
+                                font-size: 0.25rem;
+                            }
+                            .description-text {
+                                font-size: 1rem;
+                                width: 100%;
+                            }
+                    }
+                }
+        }
+    }
+
+
+}
+
+.sec-benefits {
+
+    .intro {
+        @extend .sec-features, .intro;
+    }
+    
+}
+
+.sec-kpis {
+background-color: component.$color_main;
+color:white;
+padding: 4rem;
+width: 100%;
+
+    .kpis {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+        .number {
+                font-size: 4rem;
+                font-weight: 600;
+}
+        .description {
+                font-size: 1.5rem;
+                color: rgba(255, 255, 255, 0.603);
+}
+
+    }
+}
+
+
+.sec-onboarding {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 6rem;
+        width: 100%;
+        background-color: #f5f8ff;
+
+        img {
+            width: 50%;
+            
+
+        }
+         .cta-onboarding {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+               
+                .onboarding-title {
+                    font-size: 2rem;
+                    text-align: center;
+                    font-weight: 500;
+                }
+
+                }
+
+                .onboarding-text {
+                    color: #888; 
+                    font-weight:600;
+                    text-align: center;
+                }
+            }
+
+.sec-footer-cta {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-top: solid 1px #ddd;
+
+.description-footer {
+    padding-top: 1.5rem;
+}
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+
+
+       .logo-footer {
+        padding-left: 0.7rem;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+
+
+        img {
+            width: 300px;
+        }
+
+        li {
+            padding: 0.5rem;
+            display: inline;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            padding: auto;
+            margin-right: 0.6rem;
+        }
+             
+        }
+    }
+}

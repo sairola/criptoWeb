@@ -1,0 +1,130 @@
+$color_main: #0075ff;
+
+.btn-main {
+    background-color: $color_main;
+    color: white;
+    padding: 0.25rem 1.5rem;
+    border-radius: 0.25rem;
+    border: solid 1px $color_main;
+
+
+    &:hover {
+        background-color: white;
+        color: $color_main;
+        
+
+    }
+
+    &-s {
+        @extend .btn-main;
+        font-size: 0.75rem;
+        padding: 0.1rem 1rem;
+        line-height:normal;
+
+    }
+
+        }
+
+.btn-sec {
+    @extend .btn-main;
+    color: black;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+            color: #8888;
+        
+    }
+
+    &-s {
+    @extend .btn-sec;
+        font-size: 0.75rem;
+        padding: 0.1rem 1rem;
+
+    }
+
+}
+
+.main-menu {
+    margin-bottom: 0;
+   
+    li {
+        
+        list-style: none;
+        display: inline;
+        font-size: 1rem;
+        padding: 0;
+        margin-right: 2rem;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+        
+    }
+    a:hover {
+        text-decoration: underline;
+    } 
+}
+
+.icon-sm {
+    i {
+        font-size: 1.25rem;
+        color: $color_main;
+        padding: 0.4rem 0.65rem;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #00000055 ;
+    }
+
+}
+
+
+.benefit {
+display: flex;
+flex-direction: column;   
+
+    .icon{
+        color: $color_main;
+        font-size: 7.5rem;
+        text-align: center;
+    }
+    .description {
+
+        .title{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .text{
+            color: #888; 
+            font-weight:600;
+            text-align: center;
+        }
+    }
+    .cta {
+    color: $color_main;
+    font-weight: 600;
+    margin-top: 3rem;
+    text-align: center;
+    }
+}
+
+
+.icon-desk {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .icon {
+        color: $color_main;
+        font-size: 10rem;
+        padding: 0;
+    }
+    .title{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: -2rem;
+
+    }
+
+}
+
